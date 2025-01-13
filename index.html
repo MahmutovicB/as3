@@ -12,28 +12,128 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
     </script>
     <![endif]-->
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
   </head>
 
   <body>
 
-    <nav role="navigation">
-      <ul>
-        <li><a href="#view_1">go to view 1</a></li>
-        <li><a href="#view_2">go to view 2</a></li>
-        <li><a href="#view_3">go to view 3</a></li>
-      </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #293040;">
+      <a class="navbar-brand" href="#">
+          <img src="images/logo.png" class="img-fluid ps-3" style="height: 70px;" alt="">
+      </a>
+
+      <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+      >
+      <i class="fa-solid fa-bars" style="color: #8F6449;"></i>
+      </button>       
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto me-5 fs-5">
+              <li class="nav-item mx-2">
+                  <a id="navitem" class="nav-link text-white nav-item-link" href="#view_1">Home</a>
+              </li>
+              <li class="nav-item mx-2">
+                  <a id="navitem" class="nav-link text-white nav-item-link" href="#view_2">About</a>
+              </li>
+              <li class="nav-item mx-2">
+                  <a id="navitem" class="nav-link text-white nav-item-link" href="#view_3">Products</a>
+              </li>
+              <li class="nav-item mx-2">
+                  <a id="navitem" class="nav-link text-white nav-item-link" href="#view_4">Contact us</a>
+              </li>
+              
+              <li class="nav-item mx-2">
+                  <button class="btn btn-lg text-white" data-bs-toggle="modal" data-bs-target="#myModal1" style="background-color: #8F6449;" >Log in</button>
+
+                  <div class="modal fade" id="myModal1">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title">Log in</h5>
+                                  <button type="button" id="closeModalButton" class="btn-close" data-bs-dismiss="modal"></button>
+                              </div>
+                              <div class="modal-body">
+                                  <form action="" id="loginform" onsubmit="checkUser(event)">
+                                      <div class="mb-3">
+                                          <label for="email" class="form-label">Email address</label>
+                                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                      </div>
+                                      <div class="mb-3">
+                                          <label for="password" class="form-label">Password</label>
+                                          <input type="password" class="form-control" id="password">
+                                      </div>
+                                      <button type="submit" class="btn text-white" style="background-color: #293040 ;">Submit</button>
+                                  </form>
+                              </div>
+                              <div class="modal-footer" id="modalFooter">
+                                  <a href="#view_5">
+                                      <button class="btn text-white" style="background-color: #8F6449;">Register</button>
+                                  </a>
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+  </nav>
 
     <main id="spapp" role="main">
-      <section id="view_2"></section>
-      <section id="view_3"><h1>view 3</h1></section>
+      <section id="view_2" class="center-content"></section>
+      <section id="view_3"></section>
+      <section id="view_4"></section>
+      <section id="view_5"></section>
       <section id="error_404"><h1>Page not found</h1></section>
       <section id="view_1" data-load="view_1.html" ></section>
     </main>
+    
 
+    <footer id="ftr">
+      <div id="ftrdiv" class="container-fluid text-center text-white pt-5" style="background-color: #293040;">
+          <div class="row">
+              <div class="col-md-4 offset-md-2 align-content-center">
+                  <h2 style="font-weight: lighter;">About Me</h2>
+                  <p style="font-weight: lighter;">Benjamin Mahmutovic</p>
+                  <p style="font-weight: lighter;">Student ID: 24005161</p>
+              </div>
+              <div class="col-md-4 align-content-center">
+                  <h2 style="font-weight: lighter;">IBU 061</h2>
+                  <h4 style="font-weight: lighter;">Foundations of Web Development</h4>
+                  <p style="font-weight: lighter;">MDc Amela Vatres Mudzelet</p>
+                  <p style="font-weight: lighter;">L.A. Ajla Korman</p>
+              </div>
+          </div>
+      </div> 
+  </footer>
+
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/145fc39f77.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="assets/js/jquery.spapp.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/index.js"></script>
+  
+    
 
   </body>
 

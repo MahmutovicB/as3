@@ -1,0 +1,131 @@
+<div class="container-fluid mt-5 text-center text-white" >
+    <h1 class="" style="font-weight: lighter;">Proizvodi</h1>
+</div>
+<div class="container-fluid align-content-center" style="height: 85vh;">
+    <div class="row">
+
+        <div class="kartica col-md-3 p-2">
+            <div class="card shadow" style="background-color: #293040; position:relative; border-radius: 10%;">
+                
+                <img src="images/daske1.jpg" alt="Daske" style="border-radius: 5% 5% 0 0; height: 200px; object-fit: cover;" onclick="openModal('images/daske1.jpg')">
+        
+                <div class="card-body text-white" style="background-color: #293040; border-radius: 10%;">
+                    <h5 class="card-title">Daske za serviranje</h5>
+                    <button onclick="toggleContent('content1', event)" class="btn btn-secondary">See more...</button>
+                    <div id="content1" style="display: none;">
+                        <p class="card-text">Veoma pouzdane i cvrste daske od punog drveta iz suma nase Bosne i Hercegovine.</p>
+                    </div>
+                </div>
+
+                <!-- <div class="card-footer" style="background-color: #293040; position:relative;">
+                    <a href="#view_4" class="btn btn-primary" onclick="storeData('Daske za serviranje', './images/daske1.jpg', 'Veoma pouzdane i cvrste daske od punog drveta iz suma nase Bosne i Hercegovine.')" style="background-color: #8F6449;">Detaljnije</a> 
+                </div> -->
+            </div>
+        </div>
+
+        <div class="kartica col-md-3 p-2">
+            <div class="card shadow" style="background-color: #293040; position:relative; border-radius: 10%;">
+                
+                <img src="images/sjecke5.jpg" alt="Sjecke" style="border-radius: 5% 5% 0 0; height: 200px; object-fit: cover;" onclick="openModal('images/sjecke5.jpg')">
+        
+                <div class="card-body text-white" style="background-color: #293040; border-radius: 10%;">
+                    <h5 class="card-title">Daske za rezanje</h5>
+                    <button onclick="toggleContent('content2', event)" class="btn btn-secondary">See more...</button>
+                    <div id="content2" style="display: none;">
+                        <p class="card-text">Kao savrsen dodatak vasem ambijentu, nase daske za serviranje igraju glavnu ulogu.</p>
+                    </div>
+                </div>
+                
+
+                <!-- <div class="card-footer" style="background-color: #293040; position:relative;">
+                    <a href="#view_4" onclick="storeData('Daske za rezanje', 'sjecke5.jpg', 'Kao savrsen dodatak vasem ambijentu, nase daske za serviranje igraju glavnu ulogu.')" class="btn btn-primary" style="background-color: #8F6449;">Detaljnije</a> 
+                </div> -->
+            </div>
+        </div>
+
+        <div class="kartica col-md-3 p-2">
+            <div class="card shadow" style="background-color: #293040; position:relative; border-radius: 10%;">
+                
+                <img src="images/stol1.jpg" class="" alt="Stolovi" style="border-radius: 5% 5% 0 0; height: 200px; object-fit: cover;" onclick="openModal('images/stol1.jpg')">
+        
+                <div class="card-body text-white" style="background-color: #293040; border-radius: 10%;">
+                    <h5 class="card-title">Stolovi</h5>
+                    <button onclick="toggleContent('content3', event)" class="btn btn-secondary">See more...</button>
+                    <div id="content3" style="display: none;">
+                        <p class="card-text">Nasi stolovi od prvoklasnog drveta upotpunjuju vas svakodnevni prostor.</p>
+                    </div>
+                </div>
+
+                <!-- <div class="card-footer" style="background-color: #293040; position:relative;">
+                    <a href="#view_4" onclick="storeData('Stolovi', 'stol1.jpg', 'Nasi stolovi od prvoklasnog drveta upotpunjuju vas svakodnevni prostor.')" class="btn btn-primary" style="background-color: #8F6449;">Detaljnije</a> 
+                </div> -->
+            </div>
+        </div>
+
+        <div class="kartica col-md-3 p-2">
+            <div class="card shadow" style="background-color: #293040; position:relative; border-radius: 10%;">
+                
+                <img src="images/krevet1.jpg" class="" alt="Kreveti" style="border-radius: 5% 5% 0 0; height: 200px; object-fit: cover;" onclick="openModal('images/krevet1.jpg')">
+        
+                <div class="card-body text-white" style="background-color: #293040; border-radius: 10%;">
+                    <h5 class="card-title">Kreveti</h5>
+                    <button onclick="toggleContent('content4', event)" class="btn btn-secondary">See more...</button>
+                    <div id="content4" style="display: none;">
+                        <p class="card-text">Uz krevete iz nase radionice, svaki san ce vam biti lijep. Uz vas smo i kada spavate.</p>
+                    </div>
+                </div>
+
+                <!-- <div class="card-footer" style="background-color: #293040; position:relative;">
+                    <a href="#view_4" onclick="storeData('Kreveti', 'images/krevet1.jpg', 'Uz krevete iz nase radionice, svaki san ce vam biti lijep. Uz vas smo i kada spavate.')"  class="btn btn-primary" style="background-color: #8F6449;">Detaljnije</a> 
+                </div> -->
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    </div>
+
+    <div class="container w-50 align-content-center justify-center text-white rounded">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col" colspan="2" style="text-align: center;">Options</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <!-- <div class="accordion mt-5" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" onclick="toggleAccordion('collapseOne')">
+                    Is it possible to order online?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    Yes, it is possible to order online. You can contact us via email or phone number.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button" type="button" onclick="toggleAccordion('collapseTwo')">
+                    Can I order a custom made product?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    Yes, you can order a custom made product. You can contact us via email or phone number.
+                </div>
+            </div>
+        </div>
+    </div> -->

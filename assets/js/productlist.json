@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Daske za serviranje",
+        "price": 30
+    },
+    {
+        "id": 2,
+        "name": "Daske za rezanje",
+        "price": 25
+    },
+    {
+        "id": 3,
+        "name": "Stolovi",
+        "price": 300
+    },
+    {
+        "id": 4,
+        "name": "Kreveti",
+        "price": 500
+    }
+]
